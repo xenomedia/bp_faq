@@ -15,26 +15,25 @@ bundle: bp_faq
 mode: default
 content:
   bp_background:
-    type: list_default
-    weight: 1
-    region: content
+    weight:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    type: list_key
   bp_width:
-    type: list_default
-    weight: 2
-    region: content
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    type: list_key
   bp_faq_section:
     type: entity_reference_revisions_entity_view
-    weight: 0
+    weight: 2
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  created: true
+  uid: true

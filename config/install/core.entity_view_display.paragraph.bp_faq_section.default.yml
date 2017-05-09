@@ -14,17 +14,18 @@ mode: default
 content:
   bp_answer:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
   bp_question:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-hidden: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

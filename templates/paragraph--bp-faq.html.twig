@@ -37,6 +37,7 @@
  */
 #}
 
+{{ attach_library('bootstrap_paragraphs/bootstrap-paragraphs') }}
 {{ attach_library('bp_faq/bp-faq') }}
 
 {# Renders Width field. #}
@@ -150,14 +151,26 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     <ul class="paragraph--type--bp-faq__questions">
       {# Loops through the faq sections to print the questions. #}
       {% for key, item in content.bp_faq_section if key|first != '#' %}
-        <li><a href="#paragraph--type--bp-faq__answers--{{ paragraph_id }}-{{ key }}">{{ item['#paragraph'].bp_faq_section_question.value }}</a></li>
+        <li>
+          <a href="#{{ paragraph_id }}-{{ key }}">
+            {{ item['#paragraph'].bp_question.value }}
+          </a>
+        </li>
       {% endfor %}
     </ul>
     <ul class="paragraph--type--bp-faq__answers">
       {# Loops through the faq sections again to print the answers. #}
       {% for key, item in content.bp_faq_section if key|first != '#' %}
-        <li><a id="#paragraph--type--bp-faq__answers--{{ paragraph_id }}-{{ key }}"></a>{{ item['#paragraph'].bp_faq_section_answer.value }}</li>
+        <li itemscope itemtype="http://schema.org/Question">
+          <a id="{{ paragraph_id }}-{{ key }}"></a>
+          <strong itemprop="name">{{ item['#paragraph'].bp_question.value }}</strong><br>
+          <div itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer">
+            <div itemprop="text">
+              {{ item['#paragraph'].bp_answer.value|t }}
+            </div>
+          </div>
+        </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
