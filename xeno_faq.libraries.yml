@@ -1,0 +1,10 @@
+xeno-faq:
+  css:
+    component:
+      css/xeno-faq.css:
+        minified: false
+  js:
+    js/xeno-faq.js:
+      minified: false
+  dependencies:
+    - core/jquery

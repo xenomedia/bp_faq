@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_answer
+    - paragraphs.paragraphs_type.bp_faq_section
+  module:
+    - text
+id: paragraph.bp_faq_section.bp_answer
+field_name: bp_answer
+entity_type: paragraph
+bundle: bp_faq_section
+label: Answer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

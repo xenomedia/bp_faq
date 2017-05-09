@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bp_faq.bp_background
+    - field.field.paragraph.bp_faq.bp_width
+    - field.field.paragraph.bp_faq.bp_faq_section
+    - paragraphs.paragraphs_type.bp_faq
+  module:
+    - paragraphs
+id: paragraph.bp_faq.default
+targetEntityType: paragraph
+bundle: bp_faq
+mode: default
+content:
+  bp_background:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  bp_width:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  bp_faq_section:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

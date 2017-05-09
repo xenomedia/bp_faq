@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bp_faq
+label: FAQ
+behavior_plugins: {  }

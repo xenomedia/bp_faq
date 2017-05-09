@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bp_faq.bp_background
+    - field.field.paragraph.bp_faq.bp_width
+    - field.field.paragraph.bp_faq.bp_faq_section
+    - paragraphs.paragraphs_type.bp_faq
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.bp_faq.default
+targetEntityType: paragraph
+bundle: bp_faq
+mode: default
+content:
+  bp_background:
+    type: list_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  bp_width:
+    type: list_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  bp_faq_section:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

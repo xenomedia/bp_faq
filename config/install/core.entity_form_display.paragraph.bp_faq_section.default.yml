@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bp_faq_section.bp_answer
+    - field.field.paragraph.bp_faq_section.bp_question
+    - paragraphs.paragraphs_type.bp_faq_section
+  module:
+    - text
+id: paragraph.bp_faq_section.default
+targetEntityType: paragraph
+bundle: bp_faq_section
+mode: default
+content:
+  bp_answer:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  bp_question:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
