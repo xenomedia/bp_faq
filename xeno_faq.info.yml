@@ -1,7 +1,0 @@
-name: Xeno FAQ Paragraph Bundle
-type: module
-description: A reusable FAQ Paragraph bundle with parallax and an overlay.
-core: 8.x
-package: Paragraphs
-dependencies:
-  - paragraphs

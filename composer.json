@@ -1,5 +1,5 @@
 {
-  "name": "xenomedia/xeno_faq",
+  "name": "xenomedia/bp_faq",
   "type": "drupal-custom-module",
   "description": "Drupal 8 module that creates a FAQ Paragraphs bundle.",
   "keywords": ["Drupal"],
