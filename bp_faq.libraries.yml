@@ -1,5 +1,0 @@
-bp-faq:
-  css:
-    component:
-      css/bp-faq.css:
-        minified: false
