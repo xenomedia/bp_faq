@@ -1,7 +1,7 @@
 name: Bootstrap Paragraphs FAQ
 type: module
 description: A reusable FAQ Paragraph bundle.
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 package: Paragraphs
 dependencies:
   - paragraphs
